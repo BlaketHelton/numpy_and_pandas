@@ -2,9 +2,6 @@ import numpy as np
 
 grades = np.array([[87, 96, 70], [100, 87, 90],[94, 77, 90],
                    [100, 81, 82]])
-
-
-
 grades.sum()
 
 grades.min()
@@ -139,7 +136,21 @@ in the range 60 through 100, then reshape the result into a 3-by-4 array.
 Calculate the average of all the grades, the averages of the grades for each test
 and the averages of the grades for each student.
 '''
+random_grades = np.random.randint(60, 101, 12)
 
+reshaped_grades = random_grades.reshape(3, 4)
+
+avg_all = reshaped_grades.mean()
+
+avg_test = reshaped_grades.mean(axis=0)
+
+avg_student = reshaped_grades.mean(axis=1)
+
+print(random_grades)
+print(reshaped_grades)
+print("Average of all grades:", avg_all)
+print("Averages of grades for each test:", avg_test)
+print("Averages of grades for each student:", avg_student)
 
 
 
